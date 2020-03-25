@@ -12,29 +12,9 @@
 
 <script>
 export default {
+  props: ['ninjas'],
   data() {
-    return {
-      ninjas: [
-        {
-          id: 0,
-          name: 'Ryu',
-          speciality: 'React & Vue',
-          show: false
-        },
-        {
-          id: 1,
-          name: 'Mario',
-          speciality: 'Angular & jquery',
-          show: false
-        },
-        {
-          id: 2,
-          name: 'Ryu',
-          speciality: 'Svelte',
-          show: false
-        }
-      ]
-    };
+    return {};
   }
 };
 </script>

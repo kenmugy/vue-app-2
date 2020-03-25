@@ -1,7 +1,7 @@
 <template>
   <div class="app">
     <Header />
-    <Ninja />
+    <Ninja :ninjas="ninjas" />
     <Footer />
   </div>
 </template>
@@ -14,6 +14,30 @@ export default {
     Header,
     Ninja,
     Footer
+  },
+  data() {
+    return {
+      ninjas: [
+        {
+          id: 0,
+          name: 'Ryu',
+          speciality: 'React & Vue',
+          show: false
+        },
+        {
+          id: 1,
+          name: 'Mario',
+          speciality: 'Angular & jquery',
+          show: false
+        },
+        {
+          id: 2,
+          name: 'Ryu',
+          speciality: 'Svelte',
+          show: false
+        }
+      ]
+    };
   }
 };
 </script>
