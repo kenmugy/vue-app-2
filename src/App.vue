@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <Header />
+    <Header :title="title" />
     <Ninja :ninjas="ninjas" />
     <Footer />
   </div>
@@ -36,7 +36,8 @@ export default {
           speciality: 'Svelte',
           show: false
         }
-      ]
+      ],
+      title: 'My new title'
     };
   }
 };

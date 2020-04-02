@@ -1,13 +1,18 @@
 <template>
   <div class="header">
-    <h3>{{ title }}</h3>
+    <h3>{{ title1 }}</h3>
   </div>
 </template>
 
 <script>
 export default {
+  props: {
+    title: {
+      type: String
+    }
+  },
   data() {
-    return { title: 'My Ninjaz' };
+    return { title1: this.title };
   }
 };
 </script>
