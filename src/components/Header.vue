@@ -1,6 +1,7 @@
 <template>
   <div class="header">
     <h3>{{ title1 }}</h3>
+    <button @click="changeTitle">Change title</button>
   </div>
 </template>
 
@@ -13,6 +14,11 @@ export default {
   },
   data() {
     return { title1: this.title };
+  },
+  methods: {
+    changeTitle() {
+      this.title1 = 'My Changed Title';
+    }
   }
 };
 </script>
