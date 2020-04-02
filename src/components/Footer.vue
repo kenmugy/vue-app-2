@@ -1,11 +1,12 @@
 <template>
   <div class="footer">
-    <p>{{ copy }}</p>
+    <p>{{ copy }} - {{ title }}</p>
   </div>
 </template>
 
 <script>
 export default {
+  props: ['title'],
   data() {
     return {
       copy: 'Copyright kenNinja 2002'

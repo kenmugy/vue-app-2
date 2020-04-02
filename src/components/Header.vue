@@ -1,23 +1,19 @@
 <template>
   <div class="header">
-    <h3>{{ title1 }}</h3>
+    <h3>{{ title }}</h3>
     <button @click="changeTitle">Change title</button>
   </div>
 </template>
 
 <script>
 export default {
-  props: {
-    title: {
-      type: String
-    }
-  },
+  props: ['title'],
   data() {
-    return { title1: this.title };
+    // return { title1: this.title };
   },
   methods: {
     changeTitle() {
-      this.title1 = 'My Changed Title';
+      this.$emit('changeTitle', 'My Changed Title');
     }
   }
 };

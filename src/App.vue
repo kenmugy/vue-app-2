@@ -1,8 +1,8 @@
 <template>
   <div class="app">
-    <Header :title="title" />
+    <Header :title="title" @changeTitle="updateTitle($event)" />
     <Ninja :ninjas="ninjas" />
-    <Footer />
+    <Footer :title="title" />
   </div>
 </template>
 <script>
@@ -39,6 +39,11 @@ export default {
       ],
       title: 'My new title'
     };
+  },
+  methods: {
+    updateTitle(val) {
+      this.title = val;
+    }
   }
 };
 </script>
